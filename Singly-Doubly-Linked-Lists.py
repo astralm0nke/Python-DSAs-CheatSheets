@@ -188,13 +188,30 @@ class LinkedList:
                 prev = current
             current = current.next
             
-##Convert Binary to Decimal
+#Convert Binary to Decimal
     def binary_to_decimal(self):
             dec_val = 0
             while self.head:
                 dec_val = 2*dec_val + self.head.value
                 self.head = self.head.next
             return dec_val
+
+#Reverse list between input nodes
+def reverse_between(self, start_index, end_index):
+        if self.length <= 1:
+            return
+        dummy = Node(0)
+        dummy.next = self.head
+        prev = dummy
+        for i in range(start_index):
+            prev = prev.next
+        current = prev.next
+        for i in range(end_index-start_index):
+            node_to_move = current.next
+            current.next = node_to_move.next
+            node_to_move.next = prev.next
+            prev.next = node_to_move
+        self.head = dummy.next
 
 #Find Kth Node from end in Linked List (NOT class method!!!)
 #Takes linked list and kth node as inputs
