@@ -1,4 +1,4 @@
-##SECTIONS 4-9, LLs and DLLs
+##Units 4-9, LLs and DLLs
 
 #SINGLY LINKED LISTS
 #DEFINITION: Ordered set of data with pointer variables only for succceeding node.
