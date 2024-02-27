@@ -2,6 +2,7 @@
 ##Definition: Associative Array of buckets, (dictionary!!!)
 ##Collision: When there's multiple values at the same hash/key. 2 common ways to deal with this:
 #Separate Chaining- list of entries compose the value for the key with collisions
+#Ex: {key: [[value], [value]]}
 #Open Addressing: Uses Linear/Quadratic/etc. Probing to find next available bucket in data map.
 
 #Class Constructor
@@ -103,7 +104,7 @@ def group_anagrams(strings):
 #Each number has a complement that equals target when added to num
 #Complement_map = {num: list index}
 #Complement will be found bc each num is added w their indices to hash table
-#So once a compliment is run that is a number in the HT, that means the Two Sum of target has been found.
+#So once a compliment is run that is a number in the HT, that means the 'Two Sum' of target has been found.
 def two_sum(nums, target):
     complement_map = {}
     for i, num in enumerate(nums):
