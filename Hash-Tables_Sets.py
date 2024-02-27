@@ -1,9 +1,13 @@
-##16-18, HASH TABLES
+##Units 16-18, HASH TABLES
 ##Definition: Associative Array of buckets, (dictionary!!!)
+##Collision: When there's multiple values at the same hash/key. 2 common ways to deal with this:
+#Separate Chaining- list of entries compose the value for the key with collisions
+#Open Addressing: Uses Linear/Quadratic/etc. Probing to find next available bucket in data map.
 
 #Class Constructor
 class HashTable:
     def __init__(self, size = 7):
+#Length of hash table should be a prime number; this increases randomness of distribution into buckets to reduce collisions
         self.data_map = [None] * size
 #Hash fxn - computes index for {key: value}
     def __hash(self, key):
@@ -30,7 +34,7 @@ class HashTable:
                     return self.data_map[index][i][1]
         return None
 #Return hash table keys fxn
-    def keys(self):
+    def show_keys(self):
         all_keys = []
         for i in range(len(self.data_map)):
             if self.data_map[i] is not None:
