@@ -8,7 +8,6 @@ class Node:
         self.value = value
         self.next = None
         
-
 class Stack:
     def __init__(self, value):
         new_node = Node(value)
@@ -158,22 +157,22 @@ class MyQueue:
     def __init__(self):
         self.stack1 = []
         self.stack2 = []
-        
+#Add to queue        
     def enqueue(self, value):
         while len(self.stack1) > 0:
             self.stack2.append(self.stack1.pop())
         self.stack2.append(value)
         while len(self.stack2) > 0:
             self.stack1.append(self.stack2.pop())
-
+#Delete from queue
     def dequeue(self):
         if self.is_empty():
             return None
         else:
             return self.stack1.pop()
-
+#Peep @ top node
     def peek(self):
         return self.stack1[-1]
-
+#See if queue empty
     def is_empty(self):
         return len(self.stack1) == 0
