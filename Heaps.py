@@ -1,5 +1,9 @@
 #21-23, HEAPS
-#Node value always larger than children's values
+##DEFINITION: Tree-based data structure that satisfies the heap property: 
+#In a max heap, for any given node C, if P is a parent node of C,
+#then the key (the value) of P is greater than or equal to the key of C.
+
+#^^^Node value always larger than children's values
 #Unlike BST, you can have duplicates
 #MAX HEAP: Highest value aat top: MIN HEAP: MinVal at top
 #No guarantee to order of heap- not good for searching
