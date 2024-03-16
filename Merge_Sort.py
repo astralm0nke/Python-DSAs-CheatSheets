@@ -41,7 +41,7 @@ def merge_sort(my_list):
 #returns to what? Function that called it- eventually returns sorted list to original unsorted list fxn call
 
 ##Space & Time Complexity:
-#Doubles items stored in memory: O(n)
+#Doubles items stored in memory: O(n) space complexity
 #Unlike earlier in-place sorts, merge sort creates a new list
 #Breaking apart Time complexity: O(log(n)); divide-and-conquer
 #Putting back together TC: O(n)
