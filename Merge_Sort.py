@@ -49,6 +49,10 @@ def merge_sort(my_list):
 
 ##EXERCISE
 #Merge sort method for LinkedList that merges itself with an input list
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
 class LinkedList:
     def __init__(self, value):
         new_node = Node(value)
