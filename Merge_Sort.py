@@ -25,9 +25,11 @@ def _merge(list1, list2):
     return combined
 #^^^Uses while instead of for loops cuz u don't know how many iterations u need
 
-##CODE for MERGE fnx- breaks lists in half to create 1 item 'sorted' lists
+#MERGE fnx- breaks lists in half to create 1 item 'sorted' lists
 #Uses RECURSION- same thing over and over again&makes problem smaller
 #Base Case: len(list) = 1; the uses merge helper to put everything back together
+
+##CODE
 def merge_sort(my_list):
     if len(my_list) == 1:
         return my_list
