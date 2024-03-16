@@ -46,3 +46,36 @@ def merge_sort(my_list):
 #Breaking apart Time complexity: O(log(n)); divide-and-conquer
 #Putting back together TC: O(n)
 #SO full time complexity: O(n*log(n))-> much more efficient than earlier O(n^2)
+
+##EXERCISE
+#Merge sort method for LinkedList that merges itself with an input list
+class LinkedList:
+    def __init__(self, value):
+        new_node = Node(value)
+        self.head = new_node
+        self.tail = new_node
+        self.length = 1
+
+    def merge(self, other_list):
+        other_head = other_list.head
+        dummy = Node(0)
+        current = dummy
+        
+        while self.head is not None and other_head is not None:
+            if self.head.value < other_head.value:
+                current.next = self.head
+                self.head = self.head.next
+            else:
+                current.next = other_head
+                other_head = other_head.next
+                
+            current = current.next
+                
+        if self.head is not None:
+            current.next = self.head
+        else:
+            current.next = other_head
+            self.tail = other_list.tail
+                    
+        self.head = dummy.next
+        self.length += other_list.length
