@@ -3,7 +3,7 @@
 #In graphs, a "Node" is actually a "VERTEX"
 #EDGE/CONNECTION exists between vertices-> no limit for ## verticies
 #You can use weighed edges, such as in GOOGLE MAPS or Network Routing Protocols
-#BIDIRECTIONAL graph edges gop both ways; DIRECTIONAL edges go only one way
+#BIDIRECTIONAL graph edges go both ways; DIRECTIONAL edges go only one way
 #TREES are actually a form of graph w limit of pointing to 2 nodes, LLs are graphs that can only point to 1 node
 #Know about ADJACENCY MATRICES; 1 means edge, 0 means none; or can store weights
 #ADJACENCY LIST: {Vertex: [Other connected vertices]}
